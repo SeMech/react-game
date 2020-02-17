@@ -66,7 +66,11 @@ const config = {
             to: '',
         }]),
         new webpack.DefinePlugin({
-            ADDRESS: JSON.stringify(os.networkInterfaces().wlo1[0].address),
+            ADDRESS: JSON.stringify(
+                os.networkInterfaces().wlo1
+                    ? os.networkInterfaces().wlo1[0].address
+                    : '127.0.0.1',
+            ),
         }),
     ],
     devServer: {

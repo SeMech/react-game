@@ -30,6 +30,27 @@ export default class Api {
         socket.on('startGame', (room) => callback(room));
     }
 
+    static movePlayer(y) {
+        console.log(y, 'test emit y');
+        socket.emit('movingPlayer', y);
+    }
+
+    static subscribeEnemyMoving(callback) {
+        socket.on('enemyMoving', (y) => callback(y));
+    }
+
+    static onStopGame(callback) {
+        socket.on('stopGame', (room) => callback(room))
+    };
+
+    static subscribeUpdateBall(callback) {
+        socket.on('updateBall', (ball) => callback(ball));
+    }
+
+    static subscribeRerenderCanvas(callback) {
+        socket.on('rerenderCanvas', (room) => callback(room))
+    }
+
     static socketConnect(callback) {
         try {
             socket.open();

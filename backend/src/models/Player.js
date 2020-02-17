@@ -1,14 +1,16 @@
+const CANVAS_HEIGHT = 800;
+
 class Player {
-    constructor(id) {
+    constructor(id, x = 0) {
         this.id = id;
-        this.speed = 10;
+        this.speed = 20;
         this.positions = {
-            x: 40,
-            y: 40,
+            x: x,
+            y: (CANVAS_HEIGHT / 2) - 50,
         };
         this.sizes = {
             width: 30,
-            height: 100,
+            height: 80,
         };
     }
 }

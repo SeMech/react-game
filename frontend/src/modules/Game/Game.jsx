@@ -39,7 +39,10 @@ export default class Game extends React.Component {
         return (
             <Root>
                 {!this.state.isGame && <Interface connectGame={this.connectGame} />}
-                {this.state.isGame && <GameLayer idRoom={this.state.idRoom} />}
+                {this.state.isGame && <GameLayer
+                    idPlayer={this.state.idPlayer}
+                    idRoom={this.state.idRoom}
+                />}
             </Root>
         );
     }
