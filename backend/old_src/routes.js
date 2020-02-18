@@ -49,8 +49,8 @@ module.exports = function (app, io, mongoose) {
                     ball.y < player2.positions.y + player2.sizes.height
                 ) {
                     room.dataGame.ball.dx = -ball.dx;
-                    room.dataGame.ball.dx *= 1.01;
-                    room.dataGame.ball.dy *= 1.01;
+                    room.dataGame.ball.dx *= 1.1;
+                    room.dataGame.ball.dy *= 1.1;
                 }
             }
 
@@ -60,8 +60,8 @@ module.exports = function (app, io, mongoose) {
                     ball.y < player1.positions.y + player1.sizes.height
                 ) {
                     room.dataGame.ball.dx = -ball.dx;
-                    room.dataGame.ball.dx *= 1.01;
-                    room.dataGame.ball.dy *= 1.01;
+                    room.dataGame.ball.dx *= 1.1;
+                    room.dataGame.ball.dy *= 1.1;
                 }
             }
 

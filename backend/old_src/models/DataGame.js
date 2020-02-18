@@ -9,8 +9,8 @@ class DataGame {
             radius: 10,
             x: WIDTH / 2,
             y: HEIGHT / 2,
-            dx: 5,
-            dy: -4,
+            dx: 6,
+            dy: -5,
         };
         this.score = {
             player1: 0,
