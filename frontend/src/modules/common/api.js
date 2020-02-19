@@ -7,7 +7,7 @@ const address = ADDRESS;
 const uri = `http://${address}:3000/api`;
 
 const socket = io(`http://${address}:3000`, {
-    path: '/server',
+    path: '/socket',
     autoConnect: false,
 });
 
@@ -70,7 +70,7 @@ export default class Api {
 
     static async connectRoom(idRoom, idPlayer) {
         console.log(idRoom, idPlayer);
-        socket.emit('connectRoom', {
+        socket.emit('connectToRoom', {
             idRoom: idRoom,
             idPlayer: idPlayer,
         });
